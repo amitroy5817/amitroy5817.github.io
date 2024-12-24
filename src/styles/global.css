@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Handjet:wght@100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+  --primary-color: #ff3131;
+  --text-color: #2d2d2d;
+  --bg-color: #ffffff;
+  --accent-color: #c4c4c4;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  color: var(--text-color);
+  background-color: var(--bg-color);
+}
+
+body {
+  line-height: 1.6;
+}
+
+span {
+  font-family: "JetBrains Mono", monospace;
+  margin-right: 5px;
+  font-size: 0.7em;
+  color: var(--primary-color);
+}
+
+section {
+  width: 90%;
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 4rem 0;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+.section-heading {
+  font-size: clamp(3rem, 8vw, 8rem);
+  margin-bottom: 50px;
+  position: relative;
+}
+
+.section-heading::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 100px;
+  height: 4px;
+  background-color: var(--primary-color);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.6s ease;
+  transition-delay: 0.5s;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.section-heading.in-view::after {
+  transform: scaleX(1);
+}
+
+@media screen and (max-width: 768px) {
+  section {
+    width: 95%;
+    min-height: auto;
+    margin: 3rem auto;
+    padding: 2rem 1rem;
+  }
+
+  .section-heading span {
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+}

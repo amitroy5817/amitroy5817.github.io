@@ -1,0 +1,37 @@
+.footer {
+    padding: 4rem 2rem 2rem;
+    margin-top: 2rem;
+  }
+
+  .footer-bottom {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    padding-top: 2rem;
+    text-align: center;
+  }
+  
+  .copyright {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    color: var(--text-color);
+  }
+  
+  .heart {
+    display: inline-block;
+    font-size: 1.2rem;
+    margin: 0 0.3rem;
+  }
+  
+  .name {
+    font-family: "Handjet", sans-serif;
+    font-size: 1.5rem;
+    color: var(--primary-color);
+  }
+  
+  @media screen and (max-width: 768px) {
+    .footer {
+      padding: 3rem 1rem 1rem;
+    }
+  }

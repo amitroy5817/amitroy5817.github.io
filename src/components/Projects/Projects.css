@@ -1,0 +1,80 @@
+#projects {
+  padding: 2rem;
+}
+
+.project {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.project p {
+  font-size: clamp(1rem, 2vw, 1.125rem);
+  line-height: 1.6;
+  color: var(--text-color);
+  margin: 1rem 0;
+}
+
+.project h3 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  margin: 0 0 1.5rem 0;
+}
+
+.project h3 a {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: color 0.3s ease;
+}
+
+.project h3 a:hover {
+  color: var(--primary-color);
+}
+
+.project h3 a svg {
+  height: 1.5rem;
+  width: 1.5rem;
+  transition: transform 0.3s ease;
+}
+
+.project h3 a:hover svg {
+  transform: translate(5px, -5px);
+}
+
+.features {
+  list-style: none;
+  margin-top: 1.5rem;
+}
+
+.features li {
+  margin: 0.5rem 0;
+  display: flex;
+  align-items: center;
+  font-size: clamp(0.875rem, 1.5vw, 1rem);
+}
+
+.features li::before {
+  content: "▹";
+  color: var(--primary-color);
+  margin-right: 0.5rem;
+}
+
+@media screen and (max-width: 768px) {
+  #projects {
+    padding: 1rem;
+  }
+
+  .project {
+    padding: 1.5rem;
+  }
+}

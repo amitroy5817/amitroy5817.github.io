@@ -1,0 +1,25 @@
+#hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 2rem;
+}
+
+#hero h2,
+#hero h3 {
+  font-size: clamp(3rem, 10vw, 10rem);
+  line-height: 1.1;
+}
+
+#hero h3 {
+  font-family: "Handjet", sans-serif;
+  color: #c4c4c4;
+}
+
+@media screen and (max-width: 768px) {
+  #hero {
+    padding: 1rem;
+    margin-top: 2rem;
+  }
+}
